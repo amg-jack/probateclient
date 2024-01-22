@@ -24,7 +24,7 @@ body {
 .header {
 	background-color: var(--secondary-color) !important;
 	color: var(--white) !important;
-	border-bottom: 2px solid var(--main-color) !important;
+	border-bottom: 3px solid var(--main-color) !important;
 }
 
 .text-white {
