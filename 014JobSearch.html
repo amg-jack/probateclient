@@ -1,0 +1,145 @@
+<!-- Site Master Page -->
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>AMG TESSA - Job Search</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link href="Assets/localstyles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/jquery-ui.css">
+    <script src="Assets/jquery-3.3.1.min.js.download"></script>
+    <script src="Assets/jquery-ui.min.js.download"></script>
+    <script src="Assets/bootstrap.min.js.download"></script>
+
+</head>
+
+
+<script>
+    $(function () {
+        $(".datepicker").datepicker({ dateFormat: "yy-mm-dd" });
+    });
+</script>
+
+<style>
+
+
+    .noborder {
+        border: 0px;
+        background-color: #f2f2f2;
+    }
+
+    .table-nonfluid {
+        width: auto !important;
+    }
+
+
+
+    .probateTitle {
+        font-family: arial, tahoma, verdana, helvetica, sans-serif;
+        color: #515151;
+        font-size: x-large;
+    }
+
+    .probateBoxTitle {
+        font-family: arial, tahoma, verdana, helvetica, sans-serif;
+        color: #515151;
+        font-size: large;
+    }
+
+    .probateSearchAddress {
+        font-family: arial, tahoma, verdana, helvetica, sans-serif;
+        color: #2c2c2c;
+        font-size: large;
+    }
+
+    .probateSearchAccountNumber {
+        font-family: arial, tahoma, verdana, helvetica, sans-serif;
+        color: #ed7d31;
+        font-size: large;
+    }
+
+
+
+</style>
+
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row header">
+            <div class="col-xs-6">
+                <a href="002MainMenu.html">
+                    <img src="Assets/AMG.png" alt="AMG" width="125" height="auto">
+                </a>
+            </div>
+            <div class="col-xs-6 text-right" style="padding: 30px;">
+                Asset Management Group
+            </div>
+        </div>
+
+    </div>
+
+    <form method="post" action="./014JobSearch.aspx" id="form1">
+
+        
+
+        <div class="container col-md-7" style="margin-top: 5%; float: none;">
+
+            <div class="panel all-shadow">
+                <div class="panel-heading header">
+                  <h3 class="panel-title text-center">Property Search</h3>
+                </div>
+                <div class="panel-body">
+                 
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <p>Search Criteria</p>
+                            <select name="ctl00$ContentPlaceHolder1$ddlSearchField" id="ContentPlaceHolder1_ddlSearchField" class="form-control">
+                                <option value="-1">Please select</option>
+                                <option selected="selected" value="X06CLIENTREF">Client Ref</option>
+                                <option value="X06POSTCODE">Postcode</option>
+                                <option value="X06STREET">Street</option>
+                                <option value="X06ESTATE">Name of Estate</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p>Search Field</p>
+                            <input name="ctl00$ContentPlaceHolder1$vSearch" type="text" maxlength="255" size="20" id="ContentPlaceHolder1_vSearch"
+                                class="form-control" placeholder="Search for..." required>
+                        </div>
+                        
+                    </div>
+
+                    <div class="row" style="margin-top: 3%;">
+                        <div class="col-md-3">
+                            <a href="002MainMenu.aspx" class="btn btn-amg btn-block">Back</a>
+                        </div>
+                        <div class="col-md-3 col-md-offset-6">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$Button1"
+                            value="Search" id="ContentPlaceHolder1_Button1"
+                            class="btn btn-block btn-amg">
+                        </div>
+                    </div>
+
+
+                </div>
+              </div>
+
+
+            
+        </div>
+
+
+    </form>
+</body>
+
+</html>

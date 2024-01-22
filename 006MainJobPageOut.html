@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <title>AMG TESSA - Main Property Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+    <link href="Assets/localstyles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/jquery-ui.css">
+    <script src="Assets/jquery-3.3.1.min.js.download"></script>
+    <script src="Assets/jquery-ui.min.js.download"></script>
+    <script src="Assets/bootstrap.min.js.download"></script>
+
+    <script>
+        $(function () {
+            $(".datepicker").datepicker({ dateFormat: "yy-mm-dd" });
+        });
+    </script>
+
+    <script language="JavaScript" type="text/JavaScript">
+
+
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+
+
+
+         function promptuser(vSource) {
+             if (!(confirm("Are you sure you want to do this?"))) {
+                 vSource.checked = (!vSource.checked);
+             } else {
+                 if (vSource.checked == true)
+                     document.vPD.vOnHoldReason.value = prompt("Please state why")
+             }
+         }
+
+       </script>
+    <script language="JavaScript" type="text/JavaScript">
+
+
+var editable=1;
+var hidden = 0;
+
+function toggle()
+{
+	var text = document.getElementById("disins");
+	if(hidden == 1) {
+		text.innerHTML = "show";
+  	}
+	else {
+		text.innerHTML = "hide";
+	}
+}
+
+function editit()
+{  
+	if(editable==1)
+	{
+       
+		document.getElementById("SpecialNoteBox").innerHTML="<textarea name='vSpecialNote' id='vSpecialNote' cols='30' rows='4'></textarea>";
+		editable=0;
+	}
+   
+}
+
+function checkresubmit()
+{
+
+	if(document.vPD.vClient.selectedIndex == 0)
+	{
+		alert("Please select a Client");
+		return false;
+	}
+	
+	if(document.vPD.vAddress1.value == '')
+	{
+	    alert("Please enter 1st line of address");
+	    return false;
+	}
+	
+	if(document.vPD.vAddress4.value == '')
+	{
+	    alert("Please enter Town");
+	    return false;
+	}
+	
+	if(document.vPD.vAddress6.value == '')
+	{
+	    alert("Please enter Postcode");
+	    return false;
+	}
+		
+	if(document.vPD.vPosType.selectedIndex == 0)
+	{
+		alert("Please select Possession type");
+		return false;
+	}	
+}
+
+    </script>
+    <style type="text/css">
+        .style5 {
+            width: 150px;
+        }
+
+        .assetmanagement {
+            color: #2c2c2c;
+            font-size: large;
+        }
+
+
+        .mediumText {
+            font-family: arial, tahoma, verdana, helvetica, sans-serif;
+            font-size: small;
+            color: #2c2c2c;
+        }
+
+
+        a:link {
+            font-family: arial, tahoma, verdana, helvetica, sans-serif;
+            font-size: small;
+            font-weight: bold;
+            color: #2c2c2c;
+            text-decoration: none;
+        }
+
+        a:visited {
+            font-family: arial, tahoma, verdana, helvetica, sans-serif;
+            font-size: small;
+            color: #2c2c2c;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:active {
+            font-family: arial, tahoma, verdana, helvetica, sans-serif;
+            font-size: small;
+            color: #2c2c2c;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            font-family: arial, tahoma, verdana, helvetica, sans-serif;
+            font-size: small;
+            color: #2c2c2c;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="vPD" method="post" action="006MainJobPageIn.aspx" onsubmit="return checkresubmit();">
+        <input type="hidden" name="vOnHoldReason" value="duplicate ">
+        <input type="hidden" name="vOldKeyRel" value="" />
+        <input type="hidden" name="vOldExchangeDate" value="" />
+        <input type="hidden" name="vID" value="36476a58565a54497a66596f436566524f56357578773d3d">
+
+        <div class="container-fluid">
+
+            <div class="row header">
+                <div class="col-xs-3">
+                    <a href="002MainMenu.html">
+                        <img src="Assets/AMG.png" alt="AMG" width="125" height="auto">
+                    </a>
+                </div>
+                <div class="col-xs-6 text-center" style="padding-top: 50px;">
+                    <b>AMG REF. PHJ172490 -</b> 13-21 High Street, Guildford, GU1 3DG
+                </div>
+                <div class="col-xs-3 text-right" style="padding: 30px;">
+                    Asset Management Group
+                </div>
+            </div>
+
+        </div>
+
+        <br />
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <!--Nav-->
+                <div class="col-md-2">
+
+                    <p class="btn bg-main text-white btn-block">Quick Links</p>
+                    <hr>
+
+                    <a href="002MainMenu.aspx" class="btn btn-secondary btn-block">Back to Main Menu</a><br>
+                    <a href="#" class="btn btn-secondary btn-block">Property Details</a><br>
+                    <a href="037MarketingSummary.aspx?vType=Assessment&vID=36476a58565a54497a66596f436566524f56357578773d3d"
+                        class="btn btn-secondary btn-block">
+                        Assessment Reports
+                    </a><br>
+                    <a href="018AskingPriceOut.aspx?vID=36476a58565a54497a66596f436566524f56357578773d3d"
+                        class="btn btn-secondary btn-block">
+                        Market Price History
+                    </a><br>
+                    <a href="037MarketingSummary.aspx?vType=Auction&vID=36476a58565a54497a66596f436566524f56357578773d3d"
+                        onclick="toggle_visibility('Auction');" class="btn btn-secondary btn-block">
+                        Auction Details
+                    </a><br>
+                    <a href="027OfferHistoryOut.aspx?vID=36476a58565a54497a66596f436566524f56357578773d3d"
+                        class="btn btn-secondary btn-block">Offers</a><br>
+                    <a href="99Comms.aspx?vID=36476a58565a54497a66596f436566524f56357578773d3d" target='_blank'
+                        class="btn btn-secondary btn-block" rel='opener'>Emails</a><br>
+                    <a href="010TalkSheetOut.aspx?vID=36476a58565a54497a66596f436566524f56357578773d3d" target="_blank"
+                        class="btn btn-secondary btn-block" rel="opener">History</a><br />
+
+                </div>
+                <!--Nav-->
+
+                <div class="col-md-10">
+                    <div class="row">
+                        <!--Property Details-->
+                        <div class="col-md-8">
+                            <div class="panel panel-default all-shadow" id="PropDetails">
+                                <div class="panel-heading header">Property Details</div>
+                                <div class="panel-body">
+
+
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                                        class="table table-hover">
+                                        <tr>
+                                            <th width="40%">Address</th>
+                                            <td width="60%">13-21 High Street, Guildford, GU1 3DG</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                <nobr>Client Contact</nobr>
+                                            </th>
+                                            <td>
+                                                <select name="vClientSelect" class="form-control">
+                                                    <option value=""></option>
+
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>AMG Case Handler</th>
+                                            <td>
+                                                Paula Davidson</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Property Type</th>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Bedroom</th>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th valign="middle">
+                                                Tenure
+                                            </th>
+                                            <td valign="middle">
+
+                                            </td>
+                                        <tr>
+                                            <th>Current Status</th>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Current Market Price
+                                            </th>
+                                            <td>
+                                                &pound;</td>
+                                        </tr>
+                                        <tr>
+                                            <th>On Market Date</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Days on Market</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Under Offer Date</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sale Price</th>
+                                            <td>&pound;</td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Date Clearance Completed</th>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Date Withdrawn</th>
+                                            <td>29/06/2020 12:16:17</td>
+                                        </tr>
+
+
+                                        </tr>
+
+
+
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Property Details-->
+
+                        <!--Photo-->
+                        <div class="col-md-4">
+                            <div class="panel panel-default all-shadow" id="Photos">
+                                <div class="panel-heading header text-center">Photo</div>
+                                <div class="panel-body">
+                                    <img src="https://images.unsplash.com/photo-1604166168285-173fa2afad18?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="Front Photo" width="100%" height="auto">
+                                </div>
+                            </div>
+                        </div>
+                        <!--Photo-->
+
+                        <!--Property Administration-->
+                        <div class="col-md-12">
+                            <div class="panel panel-default all-shadow" id="PropAdmin">
+                                <div class="panel-heading header">Property Administration</div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <tr>
+                                            <th>
+                                                Name of Estate</th>
+                                            <td>
+                                                Mr Walter White
+                                            </td>
+                                        </tr>
+                                        <th>
+                                            Customer Ref</th>
+                                        <td>
+                                            Lorem, ipsum dolor.
+                                        </td>
+                                        </tr>
+                                        <th>
+                                            Instruction Date</th>
+                                        <td>
+                                            01/01/0001
+                                        </td>
+
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--Property Administration-->
+
+                        <!--Clearance-->
+                        <div class="col-md-12">
+                            <div class="panel panel-default all-shadow" id="Clearance">
+                                <div class="panel-heading header">Clearance</div>
+                                <div class="panel-body">
+                                    <table class="table">
+
+                                        <tr></tr>fdf
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Clearance-->
+
+
+                        <!--Appraisal Agents-->
+                        <div class="col-md-12">
+                            <div class="panel panel-default all-shadow" id="Appraisal">
+                                <div class="panel-heading header">Appraisal Agents</div>
+                                <div class="panel-body">
+                                    <table class="table">
+
+                                        <tr>
+                                            <td>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                                                aspernatur.
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Appraisal Agents-->
+
+                        <!--Agent Details-->
+                        <div class="col-md-12">
+                            <div class="panel panel-default all-shadow" id="Agent">
+                                <div class="panel-heading header">Agent Details</div>
+                                <div class="panel-body">
+                                    <table class="table">
+
+                                        <tr>
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Agent Details-->
+
+                        <!--Auction Details-->
+                        <div class="col-md-12">
+                            <div class="panel panel-default all-shadow" id="Auction">
+                                <div class="panel-heading header">Auction Details</div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <tr>
+
+
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Auction Details-->
+
+                        <div class="col-md-12">
+                            <div class="panel panel-default all-shadow" id="Notes">
+                                <div class="panel-heading header">Notes</div>
+                                <div class="panel-body">
+
+                                    <ul>
+                                        <li>Earliest Customer Contact Date 19/01/2024.</li>
+                                        <li>
+                                            Additional comments Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Voluptates, voluptatum?
+                                        </li>
+                                        <li>
+                                            Instruction type:
+                                            Full sale, Valuation only, Maintenance Full sale
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet.
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!--End Row-->
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!--End Row-->
+
+        </div><!--End Container Fluid-->
+
+
+
+
+
+
+
+        </td>
+
+        </tr>
+        </table>
+
+    </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>AMG TESSA - Log On Screen</title>
+
+    <link href="Assets/localstyles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/jquery-ui.css">
+    <script src="Assets/jquery-3.3.1.min.js.download"></script>
+    <script src="Assets/jquery-ui.min.js.download"></script>
+    <script src="Assets/bootstrap.min.js.download"></script>
+    <style type="text/css">
+
+        body {
+            background: url('https://images.unsplash.com/photo-1629677641509-9e726c20e357?q=80&w=3871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row header">
+            <div class="col-xs-6">
+                <img src="Assets/AMG.png" alt="AMG" width="125" height="auto">
+            </div>
+            <div class="col-xs-6 text-right" style="padding: 30px;">
+                Asset Management Group
+            </div>
+        </div>
+
+    </div>
+
+    <form name="logonform" method="post" action="https://www.amgtessa.co.uk/probateclient/001LogonIn.aspx">
+
+    <div class="container-fluid">    
+	   
+        <div class="row">
+          
+          <div class="col-xs-6 col-md-3 center-block" style="margin-top: 10%; float: none;">
+              
+              
+              <div class="text-center text-white" style="padding: 10px;">
+
+                <h3>AMG Client Portal</h3>
+
+              </div>
+              
+              
+              <form action="001LogonIn.aspx" method="post" class="form-sign-in-class">
+                
+                <div class="form-group">
+                <input class="form-control input-lg" name="userid" type="text" id="userid" maxlength="25" placeholder="Username:" autofocus>
+                </div>
+                
+                <div class="form-group">
+                <input class="form-control input-lg" name="password" type="password" id="password" size="15" maxlength="50" placeholder="Password:" autocomplete="off">
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn btn-lg btn-amg btn-block" value="Log in">Log In</button>
+                </div>
+
+              </form>
+              
+          </div>
+      
+        </div>
+      </div>
+
+    </form>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-white text-center" style="bottom: 20px;  position: absolute;">
+                Unauthorised use of this system is a criminal offence which could render you liable to prosecution under the Computer Misuse Act 1990.  
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

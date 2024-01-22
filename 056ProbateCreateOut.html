@@ -1,0 +1,2155 @@
+
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <title>
+        AMG TESSA
+        - Shared Ownership Edit</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" href="Assets/localstyles.css" type="text/css">
+<link href="https://www.amgtessa.co.uk/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.amgtessa.co.uk/js/jquery-ui-themes-1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://www.amgtessa.co.uk/js/jquery-3-3-1/jquery-3.3.1.min.js"></script>
+    <script src="https://www.amgtessa.co.uk/js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="https://www.amgtessa.co.uk/js/bootstrap.min.js"></script>
+    <script>
+
+        function validatechars() {
+
+            var REGEX = /[/<>\*-.%&]+/;
+
+            var EmailRegex = /(?!.*@.*@)/;
+
+            if ((REGEX.test(document.getElementsByName('vReference')[0].value))) {
+                alert("You have added problematic characters in Reference Number, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vForename')[0].value))) {
+                alert("You have added problematic characters in Forename, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vSurname')[0].value))) {
+                alert("You have added problematic characters in Surname, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+
+            if ((REGEX.test(document.getElementsByName('vAddress1')[0].value))) {
+                alert("You have added problematic characters in Building, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vAddress2')[0].value))) {
+                alert("You have added problematic characters in Street, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vAddress3')[0].value))) {
+                alert("You have added problematic characters in District, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vAddress4')[0].value))) {
+                alert("You have added problematic characters in Town, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vAddress5')[0].value))) {
+                alert("You have added problematic characters in County, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vAddress6')[0].value))) {
+                alert("You have added problematic characters in Postcode, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vDDIns')[0].value))) {
+                alert("You have added problematic characters in Drain Down Instrucions, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vCRIns')[0].value))) {
+                alert("You have added problematic characters in Clearance Required Instrucions, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vMRIns')[0].value))) {
+                alert("You have added problematic characters in Maintenace Required Instrucions, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vLease')[0].value))) {
+                alert("You have added problematic characters in Lease Details, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vOccDetails')[0].value))) {
+                alert("You have added problematic characters in Occupier Name & Contact Details, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if (document.getElementsByName('vOccDetails')[0].value.length > 7500) {
+                alert("You have exceeded the number of characters allowed in Occupier Name & Contact Details. Please edit and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vRICSIns')[0].value))) {
+                alert("You have added problematic characters in RICS Valuation Instructions, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vRegistered')[0].value))) {
+                alert("You have added problematic characters in Property Registered, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vProbate')[0].value))) {
+                alert("You have added problematic characters in Probate Status, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vAddintionalInfo')[0].value))) {
+                alert("You have added problematic characters in Additional Info, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if (document.getElementsByName('vAddintionalInfo')[0].value.length > 7500) {
+                alert("You have exceeded the number of characters allowed in Additional Info. Please edit and resubmit.");
+                return false;
+            }
+
+
+            if ((REGEX.test(document.getElementsByName('vPRName1')[0].value))) {
+                alert("You have added problematic characters in PR1 Name, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR1Relation')[0].value))) {
+                alert("You have added problematic characters in PR1 Relation to Deceased, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPRName2')[0].value))) {
+                alert("You have added problematic characters in PR2 Name, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR2Relation')[0].value))) {
+                alert("You have added problematic characters in PR2 Relation to Deceased, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPRName3')[0].value))) {
+                alert("You have added problematic characters in PR3 Name, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR3Relation')[0].value))) {
+                alert("You have added problematic characters in PR3 Relation to Deceased, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPRName4')[0].value))) {
+                alert("You have added problematic characters in PR4 Name, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR4Relation')[0].value))) {
+                alert("You have added problematic characters in PR4 Relation to Deceased, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+
+
+
+            if ((REGEX.test(document.getElementsByName('vPR1Address1')[0].value))) {
+                alert("You have added problematic characters in PR1 Building, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR1Address2')[0].value))) {
+                alert("You have added problematic characters in PR1 Street, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR1Address3')[0].value))) {
+                alert("You have added problematic characters in PR1 District, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR1Address4')[0].value))) {
+                alert("You have added problematic characters in PR1 Town, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR1Address5')[0].value))) {
+                alert("You have added problematic characters in PR1 County, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR1Address6')[0].value))) {
+                alert("You have added problematic characters in PR1 Postcode, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+
+
+
+
+            if ((REGEX.test(document.getElementsByName('vPR2Address1')[0].value))) {
+                alert("You have added problematic characters in PR2 Building, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR2Address2')[0].value))) {
+                alert("You have added problematic characters in PR2 Street, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR2Address3')[0].value))) {
+                alert("You have added problematic characters in PR2 District, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR2Address4')[0].value))) {
+                alert("You have added problematic characters in PR2 Town, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR2Address5')[0].value))) {
+                alert("You have added problematic characters in PR2 County, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR2Address6')[0].value))) {
+                alert("You have added problematic characters in PR2 Postcode, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+
+
+            if ((REGEX.test(document.getElementsByName('vPR3Address1')[0].value))) {
+                alert("You have added problematic characters in PR3 Building, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR3Address2')[0].value))) {
+                alert("You have added problematic characters in PR3 Street, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR3Address3')[0].value))) {
+                alert("You have added problematic characters in PR3 District, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR3Address4')[0].value))) {
+                alert("You have added problematic characters in PR3 Town, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR3Address5')[0].value))) {
+                alert("You have added problematic characters in PR3 County, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR3Address6')[0].value))) {
+                alert("You have added problematic characters in PR3 Postcode, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR4Address1')[0].value))) {
+                alert("You have added problematic characters in PR4 Building, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR4Address2')[0].value))) {
+                alert("You have added problematic characters in PR4 Street, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR4Address3')[0].value))) {
+                alert("You have added problematic characters in PR4 District, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR4Address4')[0].value))) {
+                alert("You have added problematic characters in PR4 Town, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR4Address5')[0].value))) {
+                alert("You have added problematic characters in PR4 County, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR4Address6')[0].value))) {
+                alert("You have added problematic characters in PR4 Postcode, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+
+
+            if ((REGEX.test(document.getElementsByName('vPR1Phone')[0].value))) {
+                alert("You have added problematic characters in PR1 Phone, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR1Email')[0].value))) {
+                alert("You have added problematic characters in PR1 Email, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if (!EmailRegex.text(document.getElementsByName('vPR1Email')[0].value)) {
+                alert("You may only enter one email address in PR1 Email. Please edit and resubmit.");
+            return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR2Phone')[0].value))) {
+                alert("You have added problematic characters in PR2 Phone, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR2Email')[0].value))) {
+                alert("You have added problematic characters in PR2 Email, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if (!EmailRegex.text(document.getElementsByName('vPR2Email')[0].value)) {
+                alert("You may only enter one email address in PR1 Email. Please edit and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR3Phone')[0].value))) {
+                alert("You have added problematic characters in PR3 Phone, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR3Email')[0].value))) {
+                alert("You have added problematic characters in PR3 Email, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if (!EmailRegex.text(document.getElementsByName('vPR3Email')[0].value)) {
+                alert("You may only enter one email address in PR3 Email. Please edit and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR4Phone')[0].value))) {
+                alert("You have added problematic characters in PR4 Phone, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vPR4Email')[0].value))) {
+                alert("You have added problematic characters in PR4 Email, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if (!EmailRegex.text(document.getElementsByName('vPR4Email')[0].value)) {
+                alert("You may only enter one email address in PR4 Email. Please edit and resubmit.");
+                return false;
+            }
+
+
+            if ((REGEX.test(document.getElementsByName('vGasProv')[0].value))) {
+                alert("You have added problematic characters in Gas Provider, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vGasAcc')[0].value))) {
+                alert("You have added problematic characters in Gas Account Number, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vGasRead')[0].value))) {
+                alert("You have added problematic characters in Gas Reading, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vElecProv')[0].value))) {
+                alert("You have added problematic characters in Electric Provider, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vElecAcc')[0].value))) {
+                alert("You have added problematic characters in Electricity Account Number, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vElecRead')[0].value))) {
+                alert("You have added problematic characters in Electric Reading, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vWaterProv')[0].value))) {
+                alert("You have added problematic characters in Water Provider, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vWaterAcc')[0].value))) {
+                alert("You have added problematic characters in Water Account Number, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vWaterRead')[0].value))) {
+                alert("You have added problematic characters in Water Reading, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vCTProv')[0].value))) {
+                alert("You have added problematic characters in Council Tax Provider, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+
+            if ((REGEX.test(document.getElementsByName('vCTAcc')[0].value))) {
+                alert("You have added problematic characters in Council Tax Account Number, such as \"/<>\\*%&\". Please remove and resubmit.");
+                return false;
+            }
+            
+
+            return false;
+        }
+
+        $(function () {
+            $(".datepicker").datepicker({ dateFormat: 'yy-mm-dd' });
+        });
+
+
+        $('#myTabs a').click(function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+
+    </script>
+    <style type="text/css">
+        .container-custom-background
+        {
+            background-color: #f5f5f5 !important;
+        }
+        
+        .table th, .table td { 
+             border-top: none !important; 
+         }
+         
+                .assetmanagement
+        {
+            font-family: arial,tahoma, verdana, helvetica, sans-serif;
+            color: #2c2c2c;
+            font-size: large;
+        }
+         
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <div class="container-fluid">
+
+            <div class="row header">
+                <div class="col-xs-3">
+                    <a href="002MainMenu.html">
+                        <img src="Assets/AMG.png" alt="AMG" width="125" height="auto">
+                    </a>
+                </div>
+                <div class="col-xs-6 text-center" style="padding-top: 50px;">
+                    <b>AMG REF. PHJ172490 -</b> 13-21 High Street, Guildford, GU1 3DG
+                </div>
+                <div class="col-xs-3 text-right" style="padding: 30px;">
+                    Asset Management Group
+                </div>
+            </div>
+
+        </div>
+       
+        <br />
+        <form name="form1" method="post" action="056ProbateCreateIn.aspx" onsubmit="return validatechars();">
+        <h2 class="text-center">
+            New Instruction</h2>
+        <br />
+        <br />
+            <!--
+        <ul id="myTabs" class="nav nav-tabs" role="tablist">
+           <li><a href="#Prop" id="prop-tab" role="tab" data-toggle="tab" aria-controls="prop" aria-expanded="true"><h6>Property Details</h6></a></li>
+            <li><a href="#Rep" id="rep-tab" role="tab" data-toggle="tab" aria-controls="rep"  aria-expanded="false"><h6>Personal Representatives</h6></a></li>
+           <!-- <li><a href="#Util" id="util-tab" role="tab" data-toggle="tab" aria-controls="util" aria-expanded="false"><h6>Utilities</h6></a></li> 
+        </ul>-->
+        <div id="myTabContent" class="tab-content">
+            <div role="tabpanel" class="tab-pane in active" id="Prop" aria-labelledby="prop-tab">
+                    <div class="container-fluid container-custom-background form-group" style="padding:10px 40px">
+                        <h4>Property</h4>
+                        <table class="table">
+                            <tr>
+                                <td></td>
+                                <td> 
+                                    <input class="form-control" type="hidden" name="vClient" value="" size="30" value=""                                   
+                                        maxlength="50"></td>
+                                <td></td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Reference Number</td>
+                                <td>
+                                    <input class="form-control" type="text" name="vReference" value="" size="10" maxlength="50">
+                                </td>
+                                <td>&nbsp;
+                                    Case Handler</td>
+                                <td><select class="form-control" name="vCaseHandler" id="vTenure1">
+                                      
+                                            <option value="2965" >Abbie Cavanagh</option>
+                                        
+                                            <option value="414" >Accounts Test</option>
+                                        
+                                            <option value="640" >Aidan Walker (Amber)</option>
+                                        
+                                            <option value="2970" >Alasdair Alexander</option>
+                                        
+                                            <option value="484" >Alex Hughes</option>
+                                        
+                                            <option value="1353" >Alexandra Rambridge</option>
+                                        
+                                            <option value="106" >Alexia Muir</option>
+                                        
+                                            <option value="1002" >ambertest (OLD)</option>
+                                        
+                                            <option value="1014" >ambertest </option>
+                                        
+                                            <option value="2279" >AMG Audit</option>
+                                        
+                                            <option value="3064" >AMGM Reports</option>
+                                        
+                                            <option value="2710" >Amy Abson</option>
+                                        
+                                            <option value="1779" >Amy Holden</option>
+                                        
+                                            <option value="1696" >Amy-Rose White</option>
+                                        
+                                            <option value="118" >Andrea Burn</option>
+                                        
+                                            <option value="725" >Andrea Hudson (Amber)</option>
+                                        
+                                            <option value="830" >Andria Warren</option>
+                                        
+                                            <option value="131" >Andy Benns</option>
+                                        
+                                            <option value="352" >Angela Mcrae</option>
+                                        
+                                            <option value="976" >Angela Lawson (HML Amber)</option>
+                                        
+                                            <option value="986" >Angela Dowkes (Amber / HML)</option>
+                                        
+                                            <option value="1040" >Angelique Lombard-Close (HML / Amber)</option>
+                                        
+                                            <option value="1274" >Ann Sewell</option>
+                                        
+                                            <option value="2337" >asdfdsaf dafasdf</option>
+                                        
+                                            <option value="493" >Audit Team </option>
+                                        
+                                            <option value="3307" >Ava Costin</option>
+                                        
+                                            <option value="1658" >Avril Caney</option>
+                                        
+                                            <option value="1571" >Beckie Fanelli</option>
+                                        
+                                            <option value="251" >Ben Evans</option>
+                                        
+                                            <option value="2119" >Benita Shuttlewood</option>
+                                        
+                                            <option value="2937" >Bradley Hay</option>
+                                        
+                                            <option value="242" >Brenda Connors</option>
+                                        
+                                            <option value="1743" >Bryan Marriott</option>
+                                        
+                                            <option value="1744" >Bryan </option>
+                                        
+                                            <option value="1583" >Brydie White</option>
+                                        
+                                            <option value="3207" >Bryony Jelfs</option>
+                                        
+                                            <option value="1654" >CAM User</option>
+                                        
+                                            <option value="2490" >Carmen White</option>
+                                        
+                                            <option value="987" >Carol Smith (Amber / HML)</option>
+                                        
+                                            <option value="247" >Carole Cox (Amber)</option>
+                                        
+                                            <option value="807" >Cath Corden (Amber)</option>
+                                        
+                                            <option value="600" >Catherine Daniels</option>
+                                        
+                                            <option value="1639" >Cathy Fogarty</option>
+                                        
+                                            <option value="2522" >Chaney Spinks</option>
+                                        
+                                            <option value="3243" >Chantal Dennill</option>
+                                        
+                                            <option value="3164" >Charlotte Wells</option>
+                                        
+                                            <option value="2987" >Charlotte Braby</option>
+                                        
+                                            <option value="2223" >Charlotte Davies</option>
+                                        
+                                            <option value="1756" >Charlotte Palmer</option>
+                                        
+                                            <option value="1417" >Charlotte Lintott</option>
+                                        
+                                            <option value="110" >Charmaine Faulds</option>
+                                        
+                                            <option value="2390" >Chelsy Finch</option>
+                                        
+                                            <option value="2504" >Chloe Leete</option>
+                                        
+                                            <option value="1848" >Chris Beckett</option>
+                                        
+                                            <option value="119" >Christine Lockhart</option>
+                                        
+                                            <option value="787" >Claire Bell</option>
+                                        
+                                            <option value="791" >Claire Hart (Amber)</option>
+                                        
+                                            <option value="1853" >Claire Catling</option>
+                                        
+                                            <option value="2404" >Coop Audit</option>
+                                        
+                                            <option value="2467" >Cristina Lanzalaco</option>
+                                        
+                                            <option value="2864" >Daisy Conway</option>
+                                        
+                                            <option value="2874" >Dale Povey</option>
+                                        
+                                            <option value="3219" >Daniel Gregory</option>
+                                        
+                                            <option value="2400" >Daniel Mann</option>
+                                        
+                                            <option value="2245" >Daniel Crannage</option>
+                                        
+                                            <option value="2318" >Daniella Scarvaglieri</option>
+                                        
+                                            <option value="2144" >Danielle Bayliss</option>
+                                        
+                                            <option value="1856" >David Parker</option>
+                                        
+                                            <option value="1854" >David Constable</option>
+                                        
+                                            <option value="1038" >Dawn Stares (HML / Amber)</option>
+                                        
+                                            <option value="1488" >Debbie Bishop</option>
+                                        
+                                            <option value="108" >Debbie Cakebread</option>
+                                        
+                                            <option value="111" >Debbie Bishop (old)</option>
+                                        
+                                            <option value="1808" >Debbie Training Bishop</option>
+                                        
+                                            <option value="2383" >Deborah Ishe</option>
+                                        
+                                            <option value="765" >Deborah Green (Derbyshire)</option>
+                                        
+                                            <option value="2296" >Debra Lucas-Weare</option>
+                                        
+                                            <option value="2319" >Derrinn Earley</option>
+                                        
+                                            <option value="1039" >Diane Cooper (HML / Amber)</option>
+                                        
+                                            <option value="2588" >Dominique Searl</option>
+                                        
+                                            <option value="1076" >Donna Lawrence</option>
+                                        
+                                            <option value="596" >Donna Morgan</option>
+                                        
+                                            <option value="2680" >Dorota </option>
+                                        
+                                            <option value="1843" >Elizabeth Howett</option>
+                                        
+                                            <option value="1941" >Elle McCook</option>
+                                        
+                                            <option value="2403" >Eloise Paice</option>
+                                        
+                                            <option value="2451" >Emily Hughes</option>
+                                        
+                                            <option value="3306" >Emily Batchelor</option>
+                                        
+                                            <option value="3271" >Emma Shipp</option>
+                                        
+                                            <option value="1037" >Emma Heselton (HML / Amber)</option>
+                                        
+                                            <option value="1418" >Err Err</option>
+                                        
+                                            <option value="1419" >Err Err</option>
+                                        
+                                            <option value="1421" >Err Err</option>
+                                        
+                                            <option value="1489" >Err Err</option>
+                                        
+                                            <option value="1499" >Err Err</option>
+                                        
+                                            <option value="1500" >Err Err</option>
+                                        
+                                            <option value="1502" >Err Err</option>
+                                        
+                                            <option value="1504" >Err Err</option>
+                                        
+                                            <option value="1507" >Err Err</option>
+                                        
+                                            <option value="1508" >Err Err</option>
+                                        
+                                            <option value="1511" >Err Err</option>
+                                        
+                                            <option value="1513" >Err Err</option>
+                                        
+                                            <option value="1516" >Err Err</option>
+                                        
+                                            <option value="1529" >Err Err</option>
+                                        
+                                            <option value="1544" >Err Err</option>
+                                        
+                                            <option value="1556" >Err Err</option>
+                                        
+                                            <option value="1558" >Err Err</option>
+                                        
+                                            <option value="1560" >Err Err</option>
+                                        
+                                            <option value="1561" >Err Err</option>
+                                        
+                                            <option value="1433" >Err Err</option>
+                                        
+                                            <option value="1434" >Err Err</option>
+                                        
+                                            <option value="1436" >Err Err</option>
+                                        
+                                            <option value="1438" >Err Err</option>
+                                        
+                                            <option value="1440" >Err Err</option>
+                                        
+                                            <option value="1445" >Err Err</option>
+                                        
+                                            <option value="1446" >Err Err</option>
+                                        
+                                            <option value="1449" >Err Err</option>
+                                        
+                                            <option value="1452" >Err Err</option>
+                                        
+                                            <option value="1454" >Err Err</option>
+                                        
+                                            <option value="1458" >Err Err</option>
+                                        
+                                            <option value="1477" >Err Err</option>
+                                        
+                                            <option value="1482" >Err Err</option>
+                                        
+                                            <option value="1483" >Err Err</option>
+                                        
+                                            <option value="126" >Err Err</option>
+                                        
+                                            <option value="2418" >Err Err</option>
+                                        
+                                            <option value="2143" >Err </option>
+                                        
+                                            <option value="2030" >Err Err</option>
+                                        
+                                            <option value="2045" >Err Err</option>
+                                        
+                                            <option value="1807" >Err Err</option>
+                                        
+                                            <option value="1697" >Err Err</option>
+                                        
+                                            <option value="1656" >Err Err</option>
+                                        
+                                            <option value="1727" >err err</option>
+                                        
+                                            <option value="1642" >Err Err</option>
+                                        
+                                            <option value="1584" >Err Err</option>
+                                        
+                                            <option value="1592" >Err Err</option>
+                                        
+                                            <option value="1461" >Err Err</option>
+                                        
+                                            <option value="1462" >Err Err</option>
+                                        
+                                            <option value="1413" >Err Err</option>
+                                        
+                                            <option value="1487" >Err Err</option>
+                                        
+                                            <option value="1651" >Err Err</option>
+                                        
+                                            <option value="1659" >ERR ERR</option>
+                                        
+                                            <option value="1663" >Err Err</option>
+                                        
+                                            <option value="1645" >Err Err</option>
+                                        
+                                            <option value="1649" >Err Err</option>
+                                        
+                                            <option value="2873" >err e</option>
+                                        
+                                            <option value="2711" >ERR ERR</option>
+                                        
+                                            <option value="2712" >ERR ERR</option>
+                                        
+                                            <option value="2854" >ERR ERR</option>
+                                        
+                                            <option value="2702" >error </option>
+                                        
+                                            <option value="3244" >Error Error</option>
+                                        
+                                            <option value="2442" >ERROR ERROR</option>
+                                        
+                                            <option value="3112" >Estate Agent</option>
+                                        
+                                            <option value="2439" >Gabriella Guinchard</option>
+                                        
+                                            <option value="446" >Gemma Saulis</option>
+                                        
+                                            <option value="2895" >Genevieve Donovan</option>
+                                        
+                                            <option value="2384" >Georgia Vickers</option>
+                                        
+                                            <option value="2116" >Gina Cumiskey</option>
+                                        
+                                            <option value="447" >Glenn Stanley</option>
+                                        
+                                            <option value="1647" >Graeme Lotz</option>
+                                        
+                                            <option value="1664" >Graham Stanbridge</option>
+                                        
+                                            <option value="2302" >Hannah Quinn</option>
+                                        
+                                            <option value="1788" >Harriet Greener</option>
+                                        
+                                            <option value="1459" >Harriet Dorling</option>
+                                        
+                                            <option value="1790" >Harry Patel</option>
+                                        
+                                            <option value="2452" >Harry Noton</option>
+                                        
+                                            <option value="2696" >Harry Wickham</option>
+                                        
+                                            <option value="2714" >Harry Boorman</option>
+                                        
+                                            <option value="2134" >Hayley Mcarthur</option>
+                                        
+                                            <option value="1393" >Hayley  Perrin (Old)</option>
+                                        
+                                            <option value="112" >Hayley Perrin</option>
+                                        
+                                            <option value="769" >Heather Thomas (Derbyshire)</option>
+                                        
+                                            <option value="1719" >Heather Chuter</option>
+                                        
+                                            <option value="3066" >Helen Gomersall</option>
+                                        
+                                            <option value="3308" >Helen Melton</option>
+                                        
+                                            <option value="2289" >Holly Williams</option>
+                                        
+                                            <option value="1251" >Holly Formstone</option>
+                                        
+                                            <option value="975" >Ian Moore (HML Amber)</option>
+                                        
+                                            <option value="433" >Ian Bishop</option>
+                                        
+                                            <option value="2844" >Izzy Segal</option>
+                                        
+                                            <option value="2380" Selected>Jack Chandler</option>
+                                        
+                                            <option value="2701" >Jade Pexton</option>
+                                        
+                                            <option value="2544" >Jade Nixon</option>
+                                        
+                                            <option value="3285" >Jana Kirkman</option>
+                                        
+                                            <option value="710" >Janet Hunt</option>
+                                        
+                                            <option value="3290" >Javeria Ahmed</option>
+                                        
+                                            <option value="1315" >Jennifer Sherwood</option>
+                                        
+                                            <option value="1646" >Jennifer Townsend</option>
+                                        
+                                            <option value="2288" >Jessica English</option>
+                                        
+                                            <option value="1314" >Jessica Hooley</option>
+                                        
+                                            <option value="1486" >Jessica Brown</option>
+                                        
+                                            <option value="2974" >Jessica Harper</option>
+                                        
+                                            <option value="2916" >Jessica Latham</option>
+                                        
+                                            <option value="3176" >Joanna Vien</option>
+                                        
+                                            <option value="753" >Joanne Toner (Amber)</option>
+                                        
+                                            <option value="3005" >Jodie Gatfield</option>
+                                        
+                                            <option value="2813" >Joe Lister-Mayne</option>
+                                        
+                                            <option value="2140" >Jonathan Jones</option>
+                                        
+                                            <option value="2280" >Jonathan Lennie</option>
+                                        
+                                            <option value="2871" >Jordon Syrett</option>
+                                        
+                                            <option value="775" >Julie Watson</option>
+                                        
+                                            <option value="191" >Justin White</option>
+                                        
+                                            <option value="2356" >Karen New</option>
+                                        
+                                            <option value="1644" >Karl Attwood </option>
+                                        
+                                            <option value="1411" >Katerina Kritikos</option>
+                                        
+                                            <option value="2853" >Katie Plimmer</option>
+                                        
+                                            <option value="1641" >Katy Maskell Edwards</option>
+                                        
+                                            <option value="2212" >Kayla Irving</option>
+                                        
+                                            <option value="1857" >Kayleigh Place</option>
+                                        
+                                            <option value="125" >Kelly Campbell</option>
+                                        
+                                            <option value="1447" >Kendra Roddam</option>
+                                        
+                                            <option value="988" >Kevin Steel (Amber / HML)</option>
+                                        
+                                            <option value="114" >Kim Foy</option>
+                                        
+                                            <option value="2121" >Kimberleigh Spreadbury</option>
+                                        
+                                            <option value="1566" >Kimberleigh Spreadbury</option>
+                                        
+                                            <option value="1640" >Kirstie Kerr </option>
+                                        
+                                            <option value="1643" >Laura  Beatty</option>
+                                        
+                                            <option value="1855" >Laura Thomas</option>
+                                        
+                                            <option value="2489" >Laura Bowler</option>
+                                        
+                                            <option value="347" >Laura Tudgey (Amber)</option>
+                                        
+                                            <option value="985" >Laura Ackrill (Abmber / HML)</option>
+                                        
+                                            <option value="1024" >Laura Harper (Amber)</option>
+                                        
+                                            <option value="1787" >Lauren Phillips</option>
+                                        
+                                            <option value="2835" >Lauren Boniface</option>
+                                        
+                                            <option value="1179" >Leanna Bird</option>
+                                        
+                                            <option value="1139" >Leigh Harrison</option>
+                                        
+                                            <option value="2298" >Leigh Sellars</option>
+                                        
+                                            <option value="1234" >Leoni Fowler</option>
+                                        
+                                            <option value="245" >lERR lERR</option>
+                                        
+                                            <option value="1041" >Linda Balderson (HML / Amber)</option>
+                                        
+                                            <option value="1780" >Linda Mckeown</option>
+                                        
+                                            <option value="1837" >Lisa Binks</option>
+                                        
+                                            <option value="340" >Lisa Marsh</option>
+                                        
+                                            <option value="104" >Lisa Marsh (Do not use)</option>
+                                        
+                                            <option value="1652" >Louis Fordham</option>
+                                        
+                                            <option value="1648" >Louise Young</option>
+                                        
+                                            <option value="2441" >Louise Condon</option>
+                                        
+                                            <option value="2348" >Lucy Tustain</option>
+                                        
+                                            <option value="1806" >Lucy Dryden</option>
+                                        
+                                            <option value="623" >Lucy Reedman</option>
+                                        
+                                            <option value="1514" >Lucy Dewdney</option>
+                                        
+                                            <option value="2949" >Lucy Gill</option>
+                                        
+                                            <option value="3329" >Lucy Swift</option>
+                                        
+                                            <option value="1786" >Luke Mose</option>
+                                        
+                                            <option value="1170" >Lyanne Burger</option>
+                                        
+                                            <option value="1801" >Lydia Thorne</option>
+                                        
+                                            <option value="1728" >Lynn Taylor</option>
+                                        
+                                            <option value="2541" >Mackenzie Morrison</option>
+                                        
+                                            <option value="1036" >Magdalena Rozycka (HML / Amber)</option>
+                                        
+                                            <option value="3175" >Marcia Wilson</option>
+                                        
+                                            <option value="1133" >Mark Franaszek</option>
+                                        
+                                            <option value="715" >Martin Boore OLD</option>
+                                        
+                                            <option value="2422" >Mathew Whitehorn</option>
+                                        
+                                            <option value="2999" >Matilde Angolini</option>
+                                        
+                                            <option value="1272" >Matt Newton</option>
+                                        
+                                            <option value="755" >Maureen Gould</option>
+                                        
+                                            <option value="774" >Mechelle Harvey</option>
+                                        
+                                            <option value="2692" >Megan Creith</option>
+                                        
+                                            <option value="2888" >Megan Butcher</option>
+                                        
+                                            <option value="2969" >Michael Tholen</option>
+                                        
+                                            <option value="989" >Michael Weston (Amber / HML)</option>
+                                        
+                                            <option value="3302" >MWTest SGM</option>
+                                        
+                                            <option value="1578" >N W (Target DB)</option>
+                                        
+                                            <option value="1138" >Natasha James</option>
+                                        
+                                            <option value="2331" >Nicolle Barratt</option>
+                                        
+                                            <option value="2495" >Nikita Wood</option>
+                                        
+                                            <option value="3305" >Noa O'Brien</option>
+                                        
+                                            <option value="2523" >Oakley Cannon</option>
+                                        
+                                            <option value="2438" >Paige Carey</option>
+                                        
+                                            <option value="2115" >Patrick Gavigan</option>
+                                        
+                                            <option value="990" >Paul Snowdon</option>
+                                        
+                                            <option value="646" >Paul Gittins (Amber)</option>
+                                        
+                                            <option value="1849" >Paula Davidson</option>
+                                        
+                                            <option value="3262" >Paula Davidson (Eq Ins)</option>
+                                        
+                                            <option value="579" >Penny Gray</option>
+                                        
+                                            <option value="105" >Peter Mavromatis</option>
+                                        
+                                            <option value="1698" >Peter Mangan</option>
+                                        
+                                            <option value="1" >Phil Hough</option>
+                                        
+                                            <option value="246" >Rachel Jagger (Amber)</option>
+                                        
+                                            <option value="3013" >Rachel Steel (temp)</option>
+                                        
+                                            <option value="984" >Rachelle Hughes (Amber / HML)</option>
+                                        
+                                            <option value="1352" >Rebecca Clark</option>
+                                        
+                                            <option value="1711" >Rebecca Bishop</option>
+                                        
+                                            <option value="2938" >Rebecca Wilman</option>
+                                        
+                                            <option value="2330" >Richard Cooper</option>
+                                        
+                                            <option value="991" >Robert Stockdale (Amber)</option>
+                                        
+                                            <option value="2966" >Robyn Grievson</option>
+                                        
+                                            <option value="1580" >S error R error</option>
+                                        
+                                            <option value="2449" >sadSA sad</option>
+                                        
+                                            <option value="1655" >Sam Crabtree</option>
+                                        
+                                            <option value="1601" >Sarah  Anderton (Amber & NYM)</option>
+                                        
+                                            <option value="423" >Sarah Hooper (A&L)</option>
+                                        
+                                            <option value="2883" >Sasha Rundle</option>
+                                        
+                                            <option value="3017" >Saskia Blaber</option>
+                                        
+                                            <option value="2225" >Sean Roblett</option>
+                                        
+                                            <option value="2872" >sgmtestlb2 </option>
+                                        
+                                            <option value="244" >Sharon Addis (Amber)</option>
+                                        
+                                            <option value="115" >Sharon Whiteford</option>
+                                        
+                                            <option value="2320" >Shelley Allen</option>
+                                        
+                                            <option value="2604" >Sheniz Carr</option>
+                                        
+                                            <option value="1842" >Sherry Samuels</option>
+                                        
+                                            <option value="102" >Simon Matthews</option>
+                                        
+                                            <option value="215" >Simon Matthews 1</option>
+                                        
+                                            <option value="424" >Simon Kaufman</option>
+                                        
+                                            <option value="2339" >Skipton Audit Guildford</option>
+                                        
+                                            <option value="2358" >Sophie Pooley</option>
+                                        
+                                            <option value="1805" >Sophie Huntingford</option>
+                                        
+                                            <option value="2334" >Stacey Howard</option>
+                                        
+                                            <option value="2479" >Stacey Test</option>
+                                        
+                                            <option value="1279" >Stacey Middleton</option>
+                                        
+                                            <option value="757" >Steph Waldron (Amber)</option>
+                                        
+                                            <option value="2382" >Stephanie Hull</option>
+                                        
+                                            <option value="2884" >Stephanie Mills</option>
+                                        
+                                            <option value="483" >Stephen Jewell</option>
+                                        
+                                            <option value="117" >Steve Gomersall</option>
+                                        
+                                            <option value="1753" >Steve Austin (Test User)</option>
+                                        
+                                            <option value="641" >Sue Macilwaine (Amber)</option>
+                                        
+                                            <option value="1470" >Susan Young</option>
+                                        
+                                            <option value="1650" >Susan Hall</option>
+                                        
+                                            <option value="1858" >Susan Hall</option>
+                                        
+                                            <option value="1016" >Suzy Catt</option>
+                                        
+                                            <option value="2502" >Tamara Sidwell</option>
+                                        
+                                            <option value="2234" >Tanya Butler</option>
+                                        
+                                            <option value="459" >Tanya Smith</option>
+                                        
+                                            <option value="123" >Tanya Walsh</option>
+                                        
+                                            <option value="2957" >Tanya May</option>
+                                        
+                                            <option value="1243" >Tasmine Nicholson</option>
+                                        
+                                            <option value="2913" >Taylor Gregory</option>
+                                        
+                                            <option value="2863" >Taylor O'Malley</option>
+                                        
+                                            <option value="3239" >Taylor Cowley</option>
+                                        
+                                            <option value="1422" >TBC </option>
+                                        
+                                            <option value="456" >Terry Whenham</option>
+                                        
+                                            <option value="101" >TESSA Administrator </option>
+                                        
+                                            <option value="3041" >testuser55 </option>
+                                        
+                                            <option value="3289" >Thiana Aidoo</option>
+                                        
+                                            <option value="2100" >Thomas Laing</option>
+                                        
+                                            <option value="1802" >Tim Muir</option>
+                                        
+                                            <option value="3162" >Tom Rosslyn-Smith</option>
+                                        
+                                            <option value="249" >Tracy Brown</option>
+                                        
+                                            <option value="1083" >Tracy Clyde</option>
+                                        
+                                            <option value="1025" >Valerie Morrison (Amber)</option>
+                                        
+                                            <option value="1563" >Valuations Admin</option>
+                                        
+                                            <option value="1638" >Vesna Djoric</option>
+                                        
+                                            <option value="1635" >Victoria Kennedy</option>
+                                        
+                                            <option value="385" >XXX XXX (XXX)</option>
+                                        
+                                            <option value="1141" >Zara Evans</option>
+                                        
+                                            <option value="1850" >Zoe Circuitt</option>
+                                        
+                                            <option value="2402" >Zoe Samuels</option>
+                                        
+                                      </select></td>
+                            </tr>
+                            <tr><td></td>
+                            </tr>
+                        </table>
+                        <h4>Estate Name</h4>
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    Title
+                                </td>
+                                <td width="100">
+                                      <select class="form-control" id="vTenure0" name="vTitle" >
+                                        <option>Mr</option>
+                                        <option>Mrs</option>
+                                        <option>Ms</option>
+                                        <option>Miss</option>
+                                        <option>Dr</option>
+                                        <option>Lord</option>
+                                        <option>Lady</option>
+                                        <option>Master</option>
+                                        <option>Captain</option>
+                                        <option>Professor</option>
+                                      </select></td>
+                                <td>
+                                    &nbsp;Forename&nbsp;
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vForename" value="" size="10" 
+                                        maxlength="50">
+                                </td>
+                                <td>
+                                    &nbsp;Surname&nbsp;
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vSurname" value="" size="10" 
+                                        maxlength="50">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Date of Death
+                                </td>
+                                <td colspan="2">
+                                    <div class="input-group"><input  type="text" name="vDeathDate" value="" size="20" maxlength="50" class="form-control datepicker" readonly="readonly" style="cursor:pointer; background-color: #FFFFFF"><span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-calendar" id="cal"></i></span></div>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Earliest Customer&nbsp;<br />
+                                    &nbsp;Contact Date
+                                </td>
+                                <td colspan="2">
+                                    <div class="input-group"><input type="text" name="vEarliestContact" value="" size="20" maxlength="50" class="form-control datepicker" readonly="readonly" style="cursor:pointer; background-color: #FFFFFF"><span class="input-group-addon" id="Span1"><i class="glyphicon glyphicon-calendar" id="I1"></i></span></div>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Instruction Type&nbsp;
+                                </td>
+                                <td colspan="2">
+                                       <select class="form-control" name="vInstructionType">
+                                
+                                        <option value="-1">Please Select...</option>
+                                    
+                                        <option value="25">Full Probate Instruction</option>
+                                    
+                                        <option value="26">Private Sale</option>
+                                    
+                                        <option value="27">Valuation Only</option>
+                                    
+                                        <option value="28">EPC Only</option>
+                                    
+                                        <option value="29">Maintenance Only</option>
+                                    
+                                        <option value="30">Assent Only</option>
+                                    
+                                        <option value="32">Insurance</option>
+                                    
+                                </select>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        <h4>Property Address</h4>
+                        <table class="table">
+                         <tr>
+                                <td>
+                                    &nbsp;</td>
+                                <td>
+                                
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Building</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vAddress1" value="" size="70" maxlength="255">
+                                </td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Street
+                                </td>
+                                <td>
+                                    <input class="form-control" type="text" name="vAddress2" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    District</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vAddress3" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Town</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vAddress4" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    County
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vAddress5" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                           <tr>
+                                <td>
+                                   Postcode
+                                
+                                </td>
+                                <td>
+                                <input class="form-control" type="text" name="vAddress6" value="" size="12" maxlength="8">
+                                </td>
+                                <td></td>
+                            </tr>
+                       <!--     <tr>
+                        <td>AMG to manage utilities?</td><td>Yes: <input id="vAMGUtilsY" type="radio" name="vAMGUtils" value="yes" /></td><td>No:  <input id="vAMGUtilsN" type="radio" name="vAMGUtils" value="no" /></td></tr>
+                            -->
+                        </table>
+                        <br />
+                        <h4>Additional Information</h4>
+                        <table cellpadding="5" cellspacing="5" class="table">
+                            <tr>
+                                <td>
+                                    Drain Down Required?&nbsp;
+                                </td>
+                                <td>
+                                    <div class="checkbox-inline">
+                                    <label><input name="vDD" type="radio" value="Yes" />Yes</label>
+                                    </div>&nbsp;
+                                    <div class="checkbox-inline">
+                                    <label><input name="vDD" type="radio" value="No" />No</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    Instructions&nbsp;
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vDDIns" value="" size="30" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Clearance Required?&nbsp;
+                                </td>
+                                <td>
+                                      <div class="checkbox-inline">
+                                    <label><input name="vCR" type="radio" value="Yes" />Yes</label>
+                                    </div>&nbsp;
+                                    <div class="checkbox-inline">
+                                    <label><input name="vCR" type="radio" value="No" />No</label>
+                                    </div>
+                                     <div class="checkbox-inline">
+                                    <label><input name="vCR" type="radio" value="Unknown" />Unknown</label>&nbsp;
+                                    </div>
+                                </td>
+                                <td>
+                                    Instructions&nbsp;
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vCRIns" value="" size="30" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Maintenance Required?&nbsp;
+                                </td>
+                                <td>
+                                     <div class="checkbox-inline">
+                                    <label><input name="vMR" type="radio" value="Yes" />Yes</label>
+                                    </div>&nbsp;
+                                    <div class="checkbox-inline">
+                                    <label><input name="vMR" type="radio" value="No" />No</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    Instructions&nbsp;
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vMRIns" value="" size="30" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Tenure?&nbsp;
+                                </td>
+                                <td>
+                                   <div class="form-group">
+                                      <select class="form-control" name="vTenure" id="vTenure">
+                                        <option value="2">Freehold</option>
+                                        <option value="1">Leasehold</option>
+                                      </select>
+                                    </div> 
+                                                                   
+                                </td>
+                                <td>
+                                    Lease details
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vLease" value="" size="30" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Property Vacant / Occupied?&nbsp;
+                                </td>
+                                <td>
+                                    <div class="checkbox-inline">
+                                    <label><input name="vOcc" type="radio" value="Occupied" />Occupied</label>
+                                    </div>&nbsp;
+                                    <div class="checkbox-inline">
+                                    <label><input name="vOcc" type="radio" value="Vacant" />Vacant</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    Occupiers name &amp; contact details
+                                </td>
+                                <td>
+                                    <textarea  class="form-control" type="text" name="vOccDetails" value="" row="20" columns="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    RICS Valuation Required?&nbsp;
+                                </td>
+                                <td>
+                                    <div class="checkbox-inline">
+                                    <label><input name="vRICS" type="radio" value="Yes" />Yes</label>
+                                    </div>&nbsp;
+                                    <div class="checkbox-inline">
+                                    <label><input name="vRICS" type="radio" value="No" />No</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    Instructions&nbsp;
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vRICSIns" value="" size="30" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Probate Status&nbsp;
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vProbate" value="" size="30" maxlength="255">
+                                </td>
+                                <td>
+                                    Property Registered?
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vRegistered" value="" size="30" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Additional Information</td>
+                                <td>
+                                    <textarea  class="form-control" type="text" name="vAdditionalInfo" value="" size="5"></textarea></td>
+                                <td>
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                            </tr>
+                        </table>
+                    </div>
+                </p>
+           <!-- </div>
+            <div role="tabpanel" class="tab-pane in" id="Rep" aria-labelledby="rep-tab"> -->
+                <div class="container container-custom-background">
+                <h4>Personal Representative 1</h4>
+                    <table class="table">
+                        <tr>
+                            <td>
+                                PR1 Name
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" name="vPR1Name" value="" size="30" maxlength="50">
+                            </td>
+                            <td>
+                                Relation to Deceased?
+                            </td>
+                            <td colspan="3">
+                                <input  class="form-control"  type="text" name="vPR1Relation" value="" size="30" maxlength="50">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Address
+                            </td>
+                            <td colspan="5">
+                            <table class="table container container-custom-background">
+                         <tr>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Building</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR1Address1" value="" size="70" maxlength="255">
+                                </td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Street
+                                </td>
+                                <td>
+                                    <input class="form-control" type="text" name="vPR1Address2" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    District</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR1Address3" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Town</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR1Address4" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    County
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR1Address5" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Postcode
+                                
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR1Address6" value="" size="12" maxlength="8">
+                                </td>
+                                <td></td>
+                            </tr>
+                           
+                        </table>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Primary Phone No
+                            </td>
+                            <td>
+                                 <div class="input-group"><span class="input-group-addon" id="Span4"><i class="glyphicon glyphicon-earphone" id="I4"></i></span><input  class="form-control"  type="text" name="vPR1Phone" value="" size="20" maxlength="50"></div>
+                            </td>
+                               <td>
+                                D.O.B
+                            </td>
+                            <td>
+                                   <div class="input-group"><span class="input-group-addon" id="Span6"><i class="glyphicon glyphicon-calendar" id="I6"></i></span><input  class="form-control"  type="text" name="vPR1Mobile" value="" size="20" maxlength="50"></div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Email Address
+                            </td>
+                            <td colspan="5">
+                                <div class="input-group"><span class="input-group-addon">@</span><input  class="form-control"  type="text" placeholder="@" width="50" name="vPR1Email" maxlength ="255"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Primary Contact?
+                            </td>
+                            <td>
+                                <input   id="Checkbox1" type="checkbox" name="vPR1Primary"  value="yes"/>
+                            </td>
+                            <td>
+                                Key Holder?
+                            </td>
+                            <td>
+                                <input   id="Checkbox2" type="checkbox" name="vPR1Keyholder"  value="yes"/>
+                            </td>
+                            <td>
+                                Include In Correspondance?
+                            </td>
+                            <td>
+                                <input  id="Checkbox3" type="checkbox" name="vPR1Correspond"  value="yes"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <h4>Personal Representative 2</h4>               
+                    <table class="table">
+                        <tr>
+                            <td>
+                                PR2 Name
+                            </td>
+                            <td>
+                                <input  class="form-control"  type="text" name="vPR2Name" value="" size="30" maxlength="50">
+                            </td>
+                            <td>
+                                Relation to Deceased?
+                            </td>
+                            <td colspan="3">
+                                <input  class="form-control"  type="text" name="vPR2Relation" value="" size="30" maxlength="50">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Address
+                            </td>
+                           <td colspan="5">
+                            <table class="table container container-custom-background">
+                         <tr>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Building</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR2Address1" value="" size="70" maxlength="255">
+                                </td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Street
+                                </td>
+                                <td>
+                                    <input class="form-control" type="text" name="vPR2Address2" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    District</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR2Address3" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Town</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR2Address4" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    County
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR2Address5" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   Postcode
+                                
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR2Address6" value="" size="12" maxlength="8">
+                                </td>
+                                <td></td>
+                            </tr>
+                           
+                        </table>
+                        </td>
+                        </tr>
+                     <tr>
+                            <td>
+                                Primary Phone No
+                            </td>
+                            <td>
+                                 <div class="input-group"><span class="input-group-addon" id="Span7"><i class="glyphicon glyphicon-earphone" id="I7"></i></span><input  class="form-control"  type="text" name="vPR2Phone" value="" size="20" maxlength="50" class="form-control"></div>
+                            </td>
+                           <td>
+                                D.O.B.
+                            </td>
+                            <td>
+                                   <div class="input-group"><span class="input-group-addon" id="Span9"><i class="glyphicon glyphicon-calendar" id="I9"></i></span><input  class="form-control"  type="text" name="vPR2Mobile" value="" size="20" maxlength="50" class="form-control"></div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Email Address
+                            </td>
+                            <td colspan="5">
+                                <div class="input-group"><span class="input-group-addon">@</span><input  class="form-control"  type="text" placeholder="@" width="50" name="vPR2Email" maxlength ="255"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Primary Contact?
+                            </td>
+                            <td>
+                                <input id="Checkbox4" type="checkbox" name="vPR2Primary"  value="yes"/>
+                            </td>
+                            <td>
+                                Key Holder?
+                            </td>
+                            <td>
+                                <input id="Checkbox5" type="checkbox" name="vPR2Keyholder"  value="yes"/>
+                            </td>
+                            <td>
+                                Include In Correspondance?
+                            </td>
+                            <td>
+                                <input id="Checkbox6" type="checkbox" name="vPR2Correspond"  value="yes"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <h4>Personal Representative 3</h4>
+                    <table  class="table">
+                        <tr>
+                            <td>
+                                PR3 Name
+                            </td>
+                            <td>
+                                <input  class="form-control"  type="text" name="vPR3Name" value="" size="30" maxlength="50">
+                            </td>
+                            <td>
+                                Relation to Deceased?
+                            </td>
+                            <td colspan="3">
+                                <input  class="form-control"  type="text" name="vPR3Relation" value="" size="30" maxlength="50">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Address
+                            </td>
+                            <td colspan="5">
+                            <table class="table container container-custom-background">
+                         <tr>
+                                <td>
+                                   
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Building</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR3Address1" value="" size="70" maxlength="255">
+                                </td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Street
+                                </td>
+                                <td>
+                                    <input class="form-control" type="text" name="vPR3Address2" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    District</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR3Address3" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Town</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR3Address4" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    County
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR3Address5" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Postcode
+                                
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR3Address6" value="" size="12" maxlength="8">
+                                </td>
+                                <td></td>
+                            </tr>
+                           
+                        </table>
+                        </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                Primary Phone No
+                            </td>
+                            <td>
+                                 <div class="input-group"><span class="input-group-addon" id="Span10"><i class="glyphicon glyphicon-earphone" id="I10"></i></span><input  class="form-control"  type="text" name="vPR3Phone" value="" size="20" maxlength="50" class="form-control"></div>
+                            </td>
+                      <td>
+                                D.O.B.
+                            </td>
+                            <td>
+                                   <div class="input-group"><span class="input-group-addon" id="Span12"><i class="glyphicon glyphicon-calendar" id="I12"></i></span><input  class="form-control"  type="text" name="vPR3Mobile" value="" size="20" maxlength="50" class="form-control"></div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Email Address
+                            </td>
+                            <td colspan="5">
+                                <div class="input-group"><span class="input-group-addon">@</span><input  class="form-control"  type="text" placeholder="@" width="50" name="vPR3Email" maxlength ="255"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Primary Contact?
+                            </td>
+                            <td>
+                                <input id="Checkbox7" type="checkbox" name="vPR3Primary"  value="yes"/>
+                            </td>
+                            <td>
+                                Key Holder?
+                            </td>
+                            <td>
+                                <input id="Checkbox8" type="checkbox" name="vPR3Keyholder"  value="yes"/>
+                            </td>
+                            <td>
+                                Include In Correspondance?
+                            </td>
+                            <td>
+                                <input id="Checkbox9" type="checkbox" name="vPR3Correspond"  value="yes"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <h4>Personal Representative 4</h4>
+                    <table class="table">
+                        <tr>
+                            <td>
+                                PR4 Name
+                            </td>
+                            <td>
+                                <input  class="form-control"  type="text" name="vPR4Name" value="" size="30" maxlength="50">
+                            </td>
+                            <td>
+                                Relation to Deceased?
+                            </td>
+                            <td colspan="3">
+                                <input  class="form-control"  type="text" name="vPR4Relation" value="" size="30" maxlength="50">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Address
+                            </td>
+                           <td colspan="5">
+                            <table class="table container container-custom-background">
+                         <tr>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Building</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR4Address1" value="" size="70" maxlength="255">
+                                </td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Street
+                                </td>
+                                <td>
+                                    <input class="form-control" type="text" name="vPR4Address2" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    District</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR4Address3" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Town</td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR4Address4" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    County
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR4Address5" value="" size="70" maxlength="255">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Postcode
+                                
+                                </td>
+                                <td>
+                                    <input  class="form-control" type="text" name="vPR4Address6" value="" size="12" maxlength="8">
+                                </td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                Primary Phone No
+                            </td>
+                            <td>
+                                 <div class="input-group"><span class="input-group-addon" id="Span13"><i class="glyphicon glyphicon-earphone" id="I13"></i></span><input  class="form-control"  type="text" name="vPR4Phone" value="" size="20" maxlength="50" class="form-control"></div>
+                            </td>
+                           <td>
+                                D.O.B.
+                            </td>
+                            <td>
+                                   <div class="input-group"><span class="input-group-addon" id="Span15"><i class="glyphicon glyphicon-calendar" id="I15"></i></span><input  class="form-control"  type="text" name="vPR4Mobile" value="" size="20" maxlength="50" class="form-control"></div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Email Address
+                            </td>
+                            <td colspan="5">
+                                <div class="input-group"><span class="input-group-addon">@</span><input  class="form-control"  type="text" placeholder="@" width="50" name="vPR4Email" maxlength ="255"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Primary Contact?
+                            </td>
+                            <td>
+                                <input id="Checkbox10" type="checkbox" name="vPR4Primary" value="yes"/>
+                            </td>
+                            <td>
+                                Key Holder?
+                            </td>
+                            <td>
+                                <input id="Checkbox11" type="checkbox" name="vPR4Keyholder" value="yes" />
+                            </td>
+                            <td>
+                                Include In Correspondance?
+                            </td>
+                            <td>
+                                <input id="Checkbox12" type="checkbox" name="vPR4Correspond" value="yes" />
+                            </td>
+                        </tr>
+                        <tr><td></td></tr>
+                    </table>
+
+                    <p class="text-center">
+
+                        <button type="submit" class="btn btn-amg" style="width: 50%;"  onclick="return validatechars()">Submit</button>
+                       
+                    </p>
+                    
+                </div>
+            </div>
+            <!--
+            <div role="tabpanel" class="tab-pane in" id="Util" aria-labelledby="util-tab">
+                <div class="container container-custom-background">
+                    <table class="table">
+                        <tr >
+                            <td>
+                                <center>Service</center>
+                            </td>
+                            <td>
+                                <center>Provider</center>
+                            </td>
+                            <td>
+                                 <center><nobr>Account Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</nobr></center>
+                            </td>
+                            <td>
+                                 <center>Meter Reading if known</center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Gas
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" name="vGasProv" value="" size="30" maxlength="50">
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" name="vGasAcc" value="" size="30" maxlength="50">
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" name="vGasRead" value="" size="30" maxlength="50">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Electric
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" name="vElecProv" value="" size="30" maxlength="50">
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" name="vElecAcc" value="" size="30" maxlength="50">
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" name="vElecRead" value="" size="30" maxlength="50">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Water
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" name="vWaterProv" value="" size="30" maxlength="50">
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" name="vWaterAcc" value="" size="30" maxlength="50">
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" name="vWaterRead" value="" size="30" maxlength="50">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Council Tax
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" name="vCTProv" value="" size="30" maxlength="50">
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" name="vCTAcc" value="" size="30" maxlength="50">
+                            </td>
+                            <td>
+                                <center>N/A</center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Date PPR Vacant
+                            </td>
+                            <td>
+                                <div class="input-group"><input type="text" name="vVacant" value="" size="20" maxlength="50" class="form-control datepicker" readonly="readonly" style="cursor:pointer; background-color: #FFFFFF"><span class="input-group-addon" id="Span3"><i class="glyphicon glyphicon-calendar" id="I3"></i></span></div>
+                            </td>
+                            <td>
+                                Date All Furniture Removed
+                            </td>
+                            <td>
+                                <div class="input-group"><input type="text" name="vFurniture" value="" size="20" maxlength="50" class="form-control datepicker" readonly="readonly" style="cursor:pointer; background-color: #FFFFFF"><span class="input-group-addon" id="Span2"><i class="glyphicon glyphicon-calendar" id="I2"></i></span></div>
+                            </td>
+                        </tr>
+                        
+                        <tr><td><button type="submit" class="btn btn-success" onclick="return validatechars()">Submit</button></td></tr>
+                    </table>
+                    
+                </div>
+            </div>
+                 -->
+        </div>
+      
+     </form>
+    </div>
+
+</body>
+</html>
