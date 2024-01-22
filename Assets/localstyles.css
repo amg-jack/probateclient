@@ -8,9 +8,23 @@ body {
 	font-family: Arial, Helvetica, sans-serif !important;
 }
 
+.bg-main {
+	background-color: var(--main-color) !important;
+}
+
+.bg-secondary {
+	background-color: var(--secondary-color) !important;
+	color: var(--white) !important;
+}
+
+.bg-white {
+	background-color: var(--white);
+}
+
 .header {
-	background-color: var(--secondary-color);
-	color: var(--white);
+	background-color: var(--secondary-color) !important;
+	color: var(--white) !important;
+	border-bottom: 2px solid var(--main-color) !important;
 }
 
 .text-white {
@@ -37,15 +51,88 @@ body {
 .btn-amg:hover {
 	background: var(--secondary-color);
 	color: var(--white) !important;
+	border: solid var(--white) 1px;
 	text-decoration: none;
 	cursor: pointer;
 	text-align: center;
 }
 
-.col-centered{
-    float: none;
-    margin: 0 auto;
+.btn-secondary {
+	background: var(--secondary-color);
+	color: var(--white) !important;
+	border: solid var(--secondary-color) 1px !important;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
 }
+
+.btn-secondary:hover {
+	background: var(--main-color);
+	color: var(--white);
+	border: solid var(--secondary-color) 1px;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+}
+
+.btn-3 {
+	background: white;
+	color: var(--secondary-color);
+	border: solid var(--main-color) 1px !important;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+}
+
+.btn-3:hover {
+	background: var(--secondary-color);
+	color: var(--white) !important;
+	border: solid var(--main-color) 1px !important;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+}
+
+.btn-4 {
+	background: white;
+	color: var(--secondary-color);
+	border: solid var(--secondary-color) 1px !important;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+}
+
+.btn-4:hover {
+	background: var(--secondary-color);
+	color: var(--white) !important;
+	border: solid var(--secondary-color) 1px !important;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+}
+
+.btn-5 {
+	background: white;
+	color: var(--main-color);
+	border: solid var(--main-color) 1px !important;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+}
+
+.btn-5:hover {
+	background: var(--main-color);
+	color: var(--white) !important;
+	border: solid var(--main-color) 1px !important;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+}
+
+
+.all-shadow {
+	box-shadow: 0 0 3px #333 !important;
+  }
 
 .row:before, .row:after {
 	display:table;
@@ -142,10 +229,10 @@ margin-left:20px
 }
 .form-search input, .form-inline input, .form-horizontal input, .form-search textarea, .form-inline textarea, .form-horizontal textarea, .form-search select, .form-inline select, .form-horizontal select, .form-search .help-inline, .form-inline .help-inline, .form-horizontal .help-inline, .form-search .uneditable-input, .form-inline .uneditable-input, .form-horizontal .uneditable-input, .form-search .input-prepend, .form-inline .input-prepend, .form-horizontal .input-prepend, .form-search .input-append, .form-inline .input-append, .form-horizontal .input-append {
 	display:inline-block;
-*display:inline;
+display:inline;
 	margin-bottom:0;
 	vertical-align:middle;
-*zoom:1
+
 }
 .form-search .hide, .form-inline .hide, .form-horizontal .hide {
 	display:none
@@ -153,7 +240,7 @@ margin-left:20px
 
 .form-horizontal .control-group {
 	margin-bottom:20px;
-*zoom:1
+zoom:1
 }
 .form-horizontal .control-group:before, .form-horizontal .control-group:after {
 	display:table;
@@ -170,15 +257,18 @@ margin-left:20px
 	text-align:right
 }
 .form-horizontal .controls {
-*display:inline-block;
-*padding-left:20px;
+display:inline-block;
+padding-left:20px;
 	margin-left:180px;
-*margin-left:0
+margin-left:0
 }
 .form-horizontal .controls:first-child {
-*padding-left:180px
+padding-left:180px
 }
-.text-white
-{
+.text-white {
 	color: #FFFFFF;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+	vertical-align: middle !important;
 }
