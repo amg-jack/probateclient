@@ -17,7 +17,6 @@
 
 </head>
 
-
 <script>
     $(function () {
         $(".datepicker").datepicker({ dateFormat: "yy-mm-dd" });
@@ -25,8 +24,6 @@
 </script>
 
 <style>
-
-
     .noborder {
         border: 0px;
         background-color: #f2f2f2;
@@ -61,9 +58,6 @@
         color: #ed7d31;
         font-size: large;
     }
-
-
-
 </style>
 
 
@@ -88,21 +82,22 @@
 
     <form method="post" action="./014JobSearch.aspx" id="form1">
 
-        
+
 
         <div class="container col-md-5" style="margin-top: 5%; float: none;">
 
             <div class="panel all-shadow">
                 <div class="panel-heading header">
-                  <h3 class="panel-title text-center">Property Search</h3>
+                    <h3 class="panel-title text-center">Property Search</h3>
                 </div>
                 <div class="panel-body">
-                 
+
                     <div class="row">
 
                         <div class="col-md-6">
                             <p>Search Criteria</p>
-                            <select name="ctl00$ContentPlaceHolder1$ddlSearchField" id="ContentPlaceHolder1_ddlSearchField" class="form-control">
+                            <select name="ctl00$ContentPlaceHolder1$ddlSearchField"
+                                id="ContentPlaceHolder1_ddlSearchField" class="form-control">
                                 <option value="-1">Please select</option>
                                 <option selected="selected" value="X06CLIENTREF">Client Ref</option>
                                 <option value="X06POSTCODE">Postcode</option>
@@ -113,10 +108,11 @@
 
                         <div class="col-md-6">
                             <p>Search Field</p>
-                            <input name="ctl00$ContentPlaceHolder1$vSearch" type="text" maxlength="255" size="20" id="ContentPlaceHolder1_vSearch"
-                                class="form-control" placeholder="Search for..." required>
+                            <input name="ctl00$ContentPlaceHolder1$vSearch" type="text" maxlength="255" size="20"
+                                id="ContentPlaceHolder1_vSearch" class="form-control" placeholder="Search for..."
+                                required>
                         </div>
-                        
+
                     </div>
 
                     <div class="row" style="margin-top: 3%;">
@@ -124,18 +120,42 @@
                             <a href="002MainMenu.aspx" class="btn btn-amg btn-block">Back</a>
                         </div>
                         <div class="col-md-3 col-md-offset-6">
-                            <input type="submit" name="ctl00$ContentPlaceHolder1$Button1"
-                            value="Search" id="ContentPlaceHolder1_Button1"
-                            class="btn btn-block btn-amg">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$Button1" value="Search"
+                                id="ContentPlaceHolder1_Button1" class="btn btn-block btn-amg">
                         </div>
                     </div>
 
 
+                    <div class="row" style="margin-top: 3%;">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <td colspan="3" align="center">
+                                        My Property List
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Property List Output-->
+                                <tr>
+                                    <td width="30%">
+                                        <a href="#" onclick="handleLink('006MainJobPageOut.aspx?vID=6b5856793066476138777a524e4b574e7a7276382b773d3d')";="">1</a>
+                                    </td>
+                                    <td width="70%">
+                                        <nobr>A M G Ltd, Unit 7, Guildford, GU1 3DG</nobr>
+                                    </td>
+                                </tr>
+                                <!-- Property List Output-->
+                            </tbody>
+                        </table>
+                    </div>
+
+
                 </div>
-              </div>
+            </div>
 
 
-            
+
         </div>
 
 

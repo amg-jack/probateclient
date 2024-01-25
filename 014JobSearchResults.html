@@ -1,0 +1,231 @@
+<!-- Site Master Page -->
+
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+        AMG Tessa -
+    </title>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+    <link href="Assets/localstyles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/jquery-ui.css">
+    <script src="Assets/jquery-3.3.1.min.js.download"></script>
+    <script src="Assets/jquery-ui.min.js.download"></script>
+    <script src="Assets/bootstrap.min.js.download"></script>
+
+
+    <script>
+        $(function () {
+            $(".datepicker").datepicker({ dateFormat: "yy-mm-dd" });
+        });
+    </script>
+
+    <style>
+        .noborder {
+            border: 0px;
+            background-color: #f2f2f2;
+        }
+
+        .table-nonfluid {
+            width: auto !important;
+        }
+
+        .white {
+            font-family: arial, tahoma, verdana, helvetica, sans-serif;
+            color: #fff;
+        }
+
+        .assetmanagement {
+            font-family: arial, tahoma, verdana, helvetica, sans-serif;
+            color: #2c2c2c;
+            font-size: large;
+        }
+
+        .probateTitle {
+            font-family: arial, tahoma, verdana, helvetica, sans-serif;
+            color: #515151;
+            font-size: x-large;
+        }
+
+        .probateBoxTitle {
+            font-family: arial, tahoma, verdana, helvetica, sans-serif;
+            color: #515151;
+            font-size: large;
+        }
+
+        .probateSearchAddress {
+            font-family: arial, tahoma, verdana, helvetica, sans-serif;
+            color: #2c2c2c;
+            font-size: large;
+        }
+
+        .probateSearchAccountNumber {
+            font-family: arial, tahoma, verdana, helvetica, sans-serif;
+            color: #ed7d31;
+            font-size: large;
+        }
+    </style>
+
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0">
+    <form method="post" action="./014JobSearchResults.aspx" id="form1">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                value="/wEPDwUJOTkwNDc1MDg1D2QWAmYPZBYCAgQPZBYCAgUPZBYCZg9kFgICAQ8WAh4LXyFJdGVtQ291bnQCARYCAgEPZBYGZg8VAQBkAgEPFQFxPGEgaHJlZj0iIyIgb25DbGljaz0iaGFuZGxlTGluaygnMDA2TWFpbkpvYlBhZ2VPdXQuYXNweD92SUQ9NzQ2YjcxNjE3NjYxNGI1NzUxNjk2ODUwNjE2NTU3MzU2YzMxNzE2ODVhNjczZDNkJykiOz5kAgIPFQcIMzg4OTYzOFAACUNvbXBsZXRlZCUxMzQgV29raW5nIFJvYWQsICwgR3VpbGRmb3JkLCBHVTEgMVFTCDM4ODk2MzhQEk1ycyBIaWxhcnkgV29vbGdhcgpCZWNraSBCb25kZGR2XW4Ql8iZ0tPiymWqWq7BGZYHpw==" />
+        </div>
+
+        <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="5F70C7BC" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                value="/wEdAAaWAvAqAc8SYeUGi3biZj93Q3+URmccjBVHWxdC8UPmpoWS/Ixu83VYzWkuXjD585D8/ndlSyP5+hGc3dhjUIJ7b8TK9+xXiHXtEzrWjsrfQXm2nwuHt9sg+Jiy/fTNs+x2944AXGyOzD3ydIWFTADL1RI1wg==" />
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="row header">
+                <div class="col-xs-6">
+                    <img src="Assets/AMG.png" alt="AMG" width="125" height="auto">
+                </div>
+                <div class="col-xs-6 text-right" style="padding: 30px;">
+                    Asset Management Group
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="center" valign="top">
+
+                    <p><br>
+                    <h1>Property Database</h1>
+                    </p>
+
+                    <p>&nbsp;</p>
+                    <div class="container-fluid">
+                        <table width="98%" border="0" cellpadding="0" cellspacing="10" bordercolor="#89A2AC"
+                            class="table table-nonfluid well" cellspacing="10">
+                            <tr>
+                                <td bordercolor="#FFFFFF">
+                                    <h3>Results of search</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="22%">
+                                    <div id="ContentPlaceHolder1_PanelEA">
+
+
+                                        <table width="100%" border="0" cellpadding="10" cellspacing="0"
+                                            bordercolor="#eeeeee" class="table">
+                                            <tr bordercolor="#FFF" bgcolor="#eeeeee">
+                                                <td class="black">
+                                                    <nobr>Client Ref</nobr>
+                                                </td>
+                                                <td class="black">Status</td>
+                                                <td class="black">Address</td>
+                                                <td class="black">
+                                                    <nobr>A/C Number </nobr>
+                                                </td>
+                                                <td class="black">Estate</td>
+                                                <td class="black">
+                                                    <nobr>Case Handler</nobr>
+                                                </td>
+                                            </tr>
+
+                                            <tr valign="top" bordercolor="#eeeeee" bgcolor="#ffffff" class="text2">
+                                                <td valign="middle">&nbsp;
+
+                                                    <!-- If (Session("vSecurity")>=20) OR CheckUserRole (10,Session("vID")) OR  (Session("vSecurity")=1) OR (vFields("X06OFFICE")=Session("vOffice")) OR (Session("vSecurity")<0) Then-->
+                                                    <a href="#"
+                                                        onClick="handleLink('006MainJobPageOut.aspx?vID=746b716176614b5751696850616557356c3171685a673d3d')"
+                                                        ;>
+                                                        <!-- End If -->
+                                                        3889638P</a>
+                                                </td>
+                                                <td>
+                                                    <!-- If (Request.Querystring("vSpecial")="OH") Or (vFields("X06ONHOLDDATE")<>"") Then -->
+                                                    <b></b>
+                                                    <!-- End If -->
+                                                    Completed
+                                                </td>
+                                                <td>
+                                                    <nobr>134 Woking Road, , Guildford, GU1 1QS</nobr>
+                                                </td>
+                                                <td>3889638P</td>
+                                                <td>Mrs Hilary Woolgar</td>
+                                                <td>Becki Bond</td>
+                                            </tr>
+
+                                        </table>
+
+                                    </div>
+
+                                    <div id="ContentPlaceHolder1_PanelNotEA">
+
+
+
+
+                                    </div>
+
+                                    <table width="100%" border="0" cellpadding="2" cellspacing="0"
+                                        bordercolor="#006666">
+                                        <tr bordercolor="#e9f0f3">
+                                            <td width="66%"> </td>
+
+                                            <td width="12%" align="right">
+                                                <a href="014JobSearch.aspx" class="btn btn-block btn-amg">Back</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+
+
+                </td>
+            </tr>
+        </table>
+
+        <table width="1020" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="21" class="text">&nbsp;</td>
+                <td colspan="2" class="text">&nbsp;</td>
+            </tr>
+        </table>
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$HFIsCancel" id="ContentPlaceHolder1_HFIsCancel" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$HFIsClose" id="ContentPlaceHolder1_HFIsClose" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$HFvSpecial" id="ContentPlaceHolder1_HFvSpecial" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$HFvEA" id="ContentPlaceHolder1_HFvEA" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$HFvID" id="ContentPlaceHolder1_HFvID" />
+
+        <script language="JavaScript">
+            function handleLink(thelink) {
+                if (window.opener != null) {
+                    window.opener.location = thelink;
+                    window.close();
+                } else {
+                    window.location = thelink;
+                }
+            }
+
+        </script>
+
+
+        </div>
+    </form>
+</body>
+
+</html>
