@@ -1,0 +1,162 @@
+<!-- Site Master Page -->
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>AMG TESSA - Summary</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link href="Assets/styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Assets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/jquery-ui.css">
+    <script src="Assets/jquery-3.3.1.min.js.download"></script>
+    <script src="Assets/jquery-ui.min.js.download"></script>
+    <script src="Assets/bootstrap.min.js.download"></script>
+
+
+    <script language="JavaScript" type="text/JavaScript">
+
+
+
+
+        function goPrint()
+        {
+        
+            document.getElementById("dButtons").style.display = "none";
+            window.print();
+            //document.getElementById("dButtons").style.display = "inline";
+        
+        }
+        
+        
+        
+        
+        function toggleComment() 
+        {
+            //document.forms.dComment.style.visibility = "hidden";
+        var divstyle = new String();
+                divstyle = document.getElementById("dComment").style.display;
+                if(divstyle.toLowerCase()=="inline" || divstyle == "")
+                {
+                    document.getElementById("dComment").style.display = "none";
+                }
+                else
+                {
+                    document.getElementById("dComment").style.display = "inline";
+                }
+        
+         
+        }
+        
+            </script>
+
+</head>
+
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row header">
+            <div class="col-xs-3">
+                <a href="002MainMenu.html">
+                    <img src="Assets/AMG.png" alt="AMG" width="125" height="auto">
+                </a>
+            </div>
+            <div class="col-xs-6 text-center" style="padding-top: 50px;">
+                <b>AMG REF. xxx -</b> Address here
+            </div>
+            <div class="col-xs-3 text-right" style="padding: 30px;">
+                Asset Management Group
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container" style="margin-top: 5%; float: none;">
+
+        <div class="panel all-shadow">
+            <div class="panel-heading header">
+                <h3 class="panel-title text-center">Valuation Summary</h3>
+            </div>
+            <div class="panel-body">
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th width="25%">Surveyor</th>
+                            <th width="15%">Date Instructed</th>
+                            <th>Type</th>
+                            <th>MV</th>
+                            <th>PMV</th>
+                            <th>RAP</th>
+                            <th>Surveyor Documents</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Allied Surveyors and Valuation</td>
+                            <td>30/01/2024</td>
+                            <td>Original</td>
+                            <td>£250000</td>
+                            <td>£235000</td>
+                            <td>£260000</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th width="25%">Estate Agent</th>
+                            <th width="15%">Date</th>
+                            <th>Type</th>
+                            <th>RAP</th>
+                            <th>PSP</th>
+                            <th></th>
+                            <th>Estate Agent Documents</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hipps Estate Agents</td>
+                            <td>30/01/2024</td>
+                            <td>Original</td>
+                            <td>£250000</td>
+                            <td>£235000</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="row">
+                    <div class="col-md-3">
+                        <button class="btn btn-amg btn-block" onclick="window.print();">
+                            Print
+                        </button>
+                    </div>
+                    <div class="col-md-3 col-md-offset-6">
+                        <a href="006MainJobPageOut.aspx?vID=" class="btn btn-amg btn-block">Back</a>
+                    </div>
+                    
+                </div>
+               
+            </div>
+        </div>
+
+
+       
+
+    </div>
+
+
+</body>
+
+</html>
