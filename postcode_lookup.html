@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postcode lookup jc test</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.getaddress.io/scripts/getaddress-find-2.0.0.min.js">
+    </script>
+
+<style>
+    #getaddress_input {
+        width: 25%;
+        margin-bottom: 50px;
+    }
+
+
+</style>
+
+</head>
+
+<body>
+
+
+
+
+    <form>
+
+        <div class="container">
+
+            <label for="" style="margin-top: 50px;">Enter postcode to search</label>
+            <div id="postcode_lookup"></div>
+            
+        
+
+            <div class="mb-3">
+                <label class="form-label">First Address Line</label>
+                <input id="formatted_address_0" type="text" class="form-control">
+
+            </div>
+
+            <div class="mb-3">
+                <label>Second Address Line</label>
+                <input id="formatted_address_1" type="text" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label>Third Address Line</label>
+                <input id="formatted_address_2" type="text" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label>Town</label>
+                <input id="town_or_city" type="text" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label>County</label>
+                <input id="county" type="text" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label>Postcode</label>
+                <input id="postcode" type="text" class="form-control">
+            </div>
+
+
+
+        </div>
+
+    </form>
+
+    <!-- after your form -->
+    <script>
+        getAddress.find('postcode_lookup', 'K63fOPHKSUy4qijsMyda-w41873');
+    </script>
+
+</body>
+
+</html>
